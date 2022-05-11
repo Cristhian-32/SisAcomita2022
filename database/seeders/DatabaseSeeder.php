@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\partner;
+use App\Models\son;
+use App\Models\spouse;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,5 +20,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
         partner::factory(50)->create();
+        son::factory(50)->create();
+        spouse::factory(50)->create();
     }
 }
