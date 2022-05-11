@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class partner extends Model
 {
     use HasFactory;
+    //Relación de 1 a *
+    public function sons(){
+        return $this->hasMany(son::class);
+    }
+
+    //Relacion de * a *
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    //Relacion de 1 * 1
+    public function spouse(){
+        return $this->hasOne(spouse::class);
+    }
 }
