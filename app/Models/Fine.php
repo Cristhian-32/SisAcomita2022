@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class images extends Model
+class Fine extends Model
 {
     use HasFactory;
 
-    //Relacion polimorfica
-    public function imageable(){
-        return $this->morphTo();
+    //Relacion de * a * inversa
+    public function activities(){
+        return $this->belongsToMany(activity::class);
     }
 }

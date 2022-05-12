@@ -21,4 +21,8 @@ class partner extends Model
     public function spouse(){
         return $this->hasOne(spouse::class);
     }
+    //Relacion de 1 a *
+    public function stands(){
+        return $this->belongsTo(stand::class);
+    }
 }
